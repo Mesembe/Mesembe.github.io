@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-family: 'Open Sans','Roboto Slab';
+    font-size: 100%;
+    vertical-align: bottom;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background-color: #252627;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid white;
+    padding: 15px;
+}
+
+nav img{
+    margin-left: 25px;
+    width: 40px;
+    height: 40px;
+}
+
+nav ul{
+list-style: none;
+}
+
+nav li{
+    display: inline-block;
+    padding:10px;
+}
+
+.nav-link{
+    color: white;
+}
+
+.nav-link:hover{
+    color:white;
+    border-bottom: 1.5px solid salmon; 
+}
+
+main{
+    position:relative;
+}
+
+section{
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    color: white;
+}
+
+.active{
+    opacity: 1;
+    transition : "all 2s ease-in";
+}
+
+.about{
+    /* display: flex; */
+    position:absolute;
+    opacity: 0;
+}
+
+.bio-description{
+    flex: 50%
+}
+
+.name{
+    font-size: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    color: turquoise;
+}
+
+.title{
+    font-size: 20px;
+    padding-left: 30px;
+    padding-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.description{
+    margin-left: 70px;
+    word-spacing: 10px;
+    font-size: 20px;
+
+}
+
+.bio-expertise{
+    flex: 50%;
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skills-expertise p{
+    margin-left: 70px;
+    word-spacing: 10px;
+    font-size: 20px;
+
+}
+
+.expertise-lang{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.expertise{
+    width: 200px;
+    height: 90px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+.expertise:hover{
+    transform: rotateY(360deg);
+    transition: all 3s;
+}
+
+.expertise i{
+    color: white;
+}
+
+.works{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    opacity: 0;
+    justify-content: center;
+
+}
+
+.work-item{
+    width: 250px;
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.work-item img{
+    width: 250px;
+    height: 210px;
+    object-fit: cover;
+    padding: 5px;
+}
+
+.work-item:hover{
+    transform: scale(1.2);
+    transition: all 2s;
+}
+
+.work-desc a{
+    color: white;
+    border-bottom: 1.5px solid salmon; 
+}
+
+footer{
+    position: relative;
+    top: 500px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer ul{
+    list-style: none;
+}
+
+footer li{
+    display: inline-block;
+    padding:10px;
+}
+
+footer a{
+    color: white;
+}
+
+footer i{
+    font-size: 30px;
+}
+
+@media screen and (max-width: 1232px) and (min-width: 841px) {
+
+    .description{
+        margin-left: 10px;
+        padding: 10px;
+    }
+
+    .expertise{
+        width: 100px;
+        height: 120px;
+    }
+
+    .skills-expertise p {
+        margin-left: 10px;    
+    }
+}
+
+@media screen and (max-width: 840px){
+
+    nav{
+        padding: 5px;
+    }
+
+    nav img{
+        margin-left: 15px;
+    }
+
+    .about{
+        flex-direction: column;
+    }
+    
+    .description{
+        margin-left: 10px;
+    }
+
+    .expertise{
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        padding-top: 15px;
+    }
+
+    .skills-expertise p {
+        margin-left: 10px;    
+    }
+
+    .works{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .work-item{
+        width: 170px;
+        height: 230px;
+    }
+
+    .work-item img{
+        width: 170px;
+        height: 200px;
+    }
+
+    footer{
+        top: 850px;
+    }
+    
+
+}
+
+@media screen and (max-width: 839px) and (min-width: 560px) {
+
+    .work-item{
+        width: 200px !important;
+        height: 230px !important;
+    }
+
+    .work-item img{
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+    footer{
+    top:680px !important ;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    
+    nav li{
+        padding: 5px;
+    }
+    .work-item{
+        width: 150px !important;
+        height: 150px !important;
+    }
+
+    .work-item img{
+        width: 150px !important;
+        height: 110px !important;
+    }
+
+    footer{
+        top:1100px !important;
+    }
+    
+}
